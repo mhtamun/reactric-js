@@ -3,6 +3,7 @@ const next = require("next");
 const dev = process.env.NODE_ENV !== "production";
 
 const bodyParser = require("body-parser");
+const knex = require("./knex");
 
 // Create the Express-Next App
 const app = next({ dev });
@@ -18,7 +19,7 @@ app
     server.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
     server.post("/api/data", (req, res) => {
-      const result = require("./connection")(req.body.query);
+      const result = knex.result(req.body.query);
 
       res.send(result);
     });

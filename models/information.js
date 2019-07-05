@@ -8,7 +8,7 @@
 //     .limit(1);
 // };
 
-import connection from "../connection";
+import connection from "../knex";
 
 export const getData = connection.query("SELECT 1 + 1 AS solution", function(error, results, fields) {
   if (error) throw error;
