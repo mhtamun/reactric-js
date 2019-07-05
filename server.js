@@ -1,6 +1,9 @@
 const express = require("express");
 const next = require("next");
 const dev = process.env.NODE_ENV !== "production";
+
+const bodyParser = require("body-parser");
+
 // Create the Express-Next App
 const app = next({ dev });
 const handle = app.getRequestHandler();
@@ -11,8 +14,13 @@ app
   .then(() => {
     const server = express();
 
-    server.get("/api/data", (req, res) => {
-      res.end("Hello World!");
+    server.use(bodyParser.json()); // support json encoded bodies
+    server.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+
+    server.post("/api/data", (req, res) => {
+      const result = require("./connection")(req.body.query);
+
+      res.send(result);
     });
 
     server.get("*", (req, res) => {

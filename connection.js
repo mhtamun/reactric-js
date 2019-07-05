@@ -25,4 +25,19 @@ connection.connect(function(err) {
   console.log("connected as id " + connection.threadId);
 });
 
-export default connection;
+const result = (query) => {
+  console.log("query: ", query);
+  // return connection.query(query, function(error, results, fields) {
+  //   if (error) {
+  //     console.log("error: ", JSON.stringify(error));
+  //     return error;
+  //   }
+  //   console.log("results: ", JSON.stringify(results));
+  //   console.log("results: ", JSON.stringify(fields));
+  //   return results;
+  // });
+}; 
+
+connection.end();
+
+module.exports = result;
