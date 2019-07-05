@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { getLatestInformation } from "../models/information";
+import { getData } from "../models/information";
 
 class Index extends Component {
   static async getInitialProps({ req }) {
     console.log("getInitialProps called...");
 
-    const result = await getLatestInformation();
+    const result = await getData();
     console.log(`Result: ${JSON.stringify(result)}`);
 
     return {
