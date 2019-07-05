@@ -10,9 +10,15 @@ app
   //Start Express server and serve the
   .then(() => {
     const server = express();
+
+    server.get("/api/data", (req, res) => {
+      res.end("Hello World!");
+    });
+
     server.get("*", (req, res) => {
       return handle(req, res);
     });
+
     server.listen(3000, err => {
       if (err) throw err;
       console.log("> Ready on http://localhost:3000");

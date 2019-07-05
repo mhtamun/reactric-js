@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { getData } from "../models/information";
+// import { getData } from "../models/information";
 
 class Index extends Component {
   static async getInitialProps({ req }) {
     console.log("getInitialProps called...");
 
-    const result = await getData();
-    console.log(`Result: ${JSON.stringify(result)}`);
+    // const result = await getData();
+    // console.log(`Result: ${JSON.stringify(result)}`);
 
     return {
       version: "1.0.0",
