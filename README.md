@@ -22,7 +22,7 @@ git clone https://github.com/mhtamun/reactric-js.git
 git clone git@github.com:mhtamun/reactric-js.git
 ```
 
-You don’t need to install or configure tools like Webpack or Babel.
+You don’t need to configure tools like Webpack or Babel.
 They are preconfigured so that you can focus on the code.
 
 Just clone project, and you’re good to go.
