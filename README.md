@@ -1,12 +1,10 @@
 # reactric-js
 
-A JS framework built for developers who need a simple standalone toolkit to create full-featured web applications powered by ReactJS, KNEX.JS to give the feel of old school web development using MySQL.
+A JS framework built for developers who need a simple standalone toolkit to create full-featured web applications powered by ReactJS, Next.js to give the feel of old school web development using MySQL.
 
 Reactric JS takes the pain out of development by adding some common boilerplate code. Such as:
 
-- UI interface builder, [React](https://reactjs.org/)
-- Routing using [React Router](https://github.com/ReactTraining/react-router)
-- SQL query builder for MySQL, [KNEX.JS](https://knexjs.org/)
+- UI interface, [React.js](https://reactjs.org/) and [Next.js](https://nextjs.org/)
 
 ## Get Started
 
