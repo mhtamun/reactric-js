@@ -1,6 +1,4 @@
-const mysql = require("mysql");
-
-const pool = mysql.createPool(require("../config/database"));
+const pool = require("mysql").createPool(require("../config/database"));
 
 pool.getConnection((err, connection) => {
   if (err) {
