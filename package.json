@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node server.js",
+    "dev": "node system/server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
-    "start:windows": "set NODE_ENV=production && node server.js"
+    "start": "NODE_ENV=production node system/server.js",
+    "start:windows": "set NODE_ENV=production && node system/server.js"
   },
   "repository": {
     "type": "git",
